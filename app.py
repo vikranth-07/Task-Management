@@ -72,14 +72,62 @@ def get_tasks(user):
 
     return cursor.fetchall()
 
-def update_task(task_id,status):
+def update_task(task_id, new_status):
 
     cursor.execute(
-        "UPDATE tasks SET status=? WHERE id=?",
-        (status,task_id)
+        """
+        UPDATE tasks
+        SET status = ?
+        WHERE id = ?
+        """,
+        (new_status, task_id)
     )
 
     conn.commit()
+
+    return cursor.rowcount
+
+if st.button("Update Status"):
+
+    rows = update_task(task_id, new_status)
+
+    if rows > 0:
+        st.success("Task Updated Successfully")
+    else:
+        st.error("Task ID Not Found")
+
+tasks = get_tasks(user)
+
+task_options = {
+    f"{task[0]} - {task[2]}": task[0]
+    for task in tasks
+}
+
+selected_task = st.selectbox(
+    "Select Task",
+    list(task_options.keys())
+)
+
+selected_id = task_options[selected_task]
+
+new_status = st.selectbox(
+    "Status",
+    ["Pending", "In Progress", "Completed"]
+)
+
+if st.button("Update"):
+
+    update_task(selected_id, new_status)
+
+    st.success("Task Updated")
+
+if st.button("Update"):
+
+    update_task(selected_id, new_status)
+
+    st.success("Updated")
+
+    st.rerun()
 
 def delete_task(task_id):
 

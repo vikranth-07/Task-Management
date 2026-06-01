@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS tasks(
 
 conn.commit()
 
+st.title("📋 Smart Task Manager")
 
 def register_user(username, password):
     try:

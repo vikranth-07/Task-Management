@@ -91,6 +91,74 @@ Manage • Track • Achieve
 </div>
 """,unsafe_allow_html=True)
 
+col1,col2,col3=st.columns(3)
+
+with col1:
+
+    st.markdown("""
+    <div style="
+    background:linear-gradient(
+    135deg,
+    #ff512f,
+    #dd2476
+    );
+    padding:25px;
+    border-radius:25px;
+    text-align:center;
+    color:white;
+    box-shadow:
+    0 15px 30px rgba(0,0,0,0.3);
+    ">
+    <h1>25</h1>
+    <h3>Total Tasks</h3>
+    </div>
+    """,
+    unsafe_allow_html=True)
+
+with col2:
+
+    st.markdown("""
+    <div style="
+    background:linear-gradient(
+    135deg,
+    #11998e,
+    #38ef7d
+    );
+    padding:25px;
+    border-radius:25px;
+    text-align:center;
+    color:white;
+    box-shadow:
+    0 15px 30px rgba(0,0,0,0.3);
+    ">
+    <h1>18</h1>
+    <h3>Completed</h3>
+    </div>
+    """,
+    unsafe_allow_html=True)
+
+with col3:
+
+    st.markdown("""
+    <div style="
+    background:linear-gradient(
+    135deg,
+    #396afc,
+    #2948ff
+    );
+    padding:25px;
+    border-radius:25px;
+    text-align:center;
+    color:white;
+    box-shadow:
+    0 15px 30px rgba(0,0,0,0.3);
+    ">
+    <h1>7</h1>
+    <h3>Pending</h3>
+    </div>
+    """,
+    unsafe_allow_html=True)
+
 st.title("📋 Smart Task Manager")
 
 def register_user(username, password):

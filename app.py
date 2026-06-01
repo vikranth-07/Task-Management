@@ -26,6 +26,45 @@ CREATE TABLE IF NOT EXISTS tasks(
 
 conn.commit()
 
+st.markdown("""
+<style>
+
+.stApp{
+background:
+linear-gradient(
+135deg,
+#ff0080,
+#7928ca,
+#0070f3,
+#00dfd8
+);
+
+background-size:400% 400%;
+
+animation:gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+
+</style>
+""",unsafe_allow_html=True)
+
+
+
 st.title("📋 Smart Task Manager")
 
 def register_user(username, password):

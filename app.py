@@ -63,6 +63,49 @@ background-position:0% 50%;
 </style>
 """,unsafe_allow_html=True)
 
+.stButton > button{
+
+background:linear-gradient(
+90deg,
+#ff00cc,
+#3333ff
+);
+
+color:white;
+font-weight:bold;
+
+border:none;
+
+border-radius:20px;
+
+padding:12px;
+
+box-shadow:
+0px 0px 20px #ff00cc;
+
+transition:0.3s;
+}
+
+.stButton > button:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+0px 0px 40px #ff00cc;
+
+}
+
+[data-testid="stSidebar"]{
+
+background:
+linear-gradient(
+180deg,
+#0f0c29,
+#302b63,
+#24243e
+);
+
+}
 
 st.title("📋 Smart Task Manager")
 

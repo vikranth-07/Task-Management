@@ -63,7 +63,33 @@ background-position:0% 50%;
 </style>
 """,unsafe_allow_html=True)
 
+st.markdown("""
+<div style="
+background:rgba(255,255,255,0.12);
+backdrop-filter:blur(20px);
+padding:30px;
+border-radius:30px;
+box-shadow:0 20px 50px rgba(0,0,0,0.3);
+text-align:center;
+">
 
+<h1 style="
+font-size:60px;
+color:white;
+font-weight:900;
+">
+🚀 TASK MASTER PRO
+</h1>
+
+<p style="
+font-size:22px;
+color:white;
+">
+Manage • Track • Achieve
+</p>
+
+</div>
+""",unsafe_allow_html=True)
 
 st.title("📋 Smart Task Manager")
 

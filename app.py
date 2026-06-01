@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import sqlite3
-import sqlite3
 
 conn = sqlite3.connect("database.db", check_same_thread=False)
 cursor = conn.cursor()
@@ -30,106 +29,6 @@ conn.commit()
 st.markdown("""
 <style>
 
-/* Main Background */
-.stApp {
-    background: linear-gradient(
-        135deg,
-        #0f172a 0%,
-        #1e293b 30%,
-        #334155 60%,
-        #0f172a 100%
-    );
-    background-attachment: fixed;
-}
-
-/* Title */
-h1, h2, h3 {
-    color: #ffffff !important;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Sidebar */
-[data-testid="stSidebar"] {
-    background: rgba(15, 23, 42, 0.95);
-    border-right: 1px solid rgba(255,255,255,0.1);
-}
-
-/* Input Fields */
-.stTextInput input,
-.stSelectbox div,
-.stDateInput input {
-    border-radius: 12px !important;
-    border: 2px solid #38bdf8 !important;
-    background-color: rgba(255,255,255,0.1) !important;
-    color: white !important;
-}
-
-/* Buttons */
-.stButton > button {
-    width: 100%;
-    border-radius: 15px;
-    background: linear-gradient(
-        90deg,
-        #06b6d4,
-        #3b82f6
-    );
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    padding: 10px;
-    transition: 0.3s;
-}
-
-.stButton > button:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 0px 20px rgba(59,130,246,0.7);
-}
-
-/* Dataframe */
-[data-testid="stDataFrame"] {
-    background: rgba(255,255,255,0.05);
-    border-radius: 15px;
-    padding: 10px;
-}
-
-/* Glass Effect Cards */
-.glass-card {
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(12px);
-    border-radius: 20px;
-    padding: 20px;
-    border: 1px solid rgba(255,255,255,0.2);
-    box-shadow: 0px 8px 32px rgba(0,0,0,0.3);
-}
-
-/* Metric Cards */
-.metric-card {
-    background: linear-gradient(
-        135deg,
-        rgba(59,130,246,0.25),
-        rgba(6,182,212,0.25)
-    );
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-/* Success Message */
-.stSuccess {
-    border-radius: 12px;
-}
-
-/* Hide Streamlit Branding */
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
-
-</style>
-""", unsafe_allow_html=True)
 
 def register_user(username, password):
     try:

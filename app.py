@@ -94,19 +94,6 @@ if st.button("Update Status"):
         st.success("Task Updated Successfully")
     else:
         st.error("Task ID Not Found")
-        
-tasks = get_tasks(user)
-task_options = {
-    f"{task[0]} - {task[2]}": task[0]
-    for task in tasks
-}
-
-selected_task = st.selectbox(
-    "Select Task",
-    list(task_options.keys())
-)
-
-selected_id = task_options[selected_task]
 
 new_status = st.selectbox(
     "Status",

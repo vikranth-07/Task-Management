@@ -88,7 +88,6 @@ def update_task(task_id, new_status):
     return cursor.rowcount
 
 if st.button("Update Status"):
-
     rows = update_task(task_id, new_status)
 
     if rows > 0:

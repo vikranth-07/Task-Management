@@ -94,8 +94,24 @@ if st.button("Update Status"):
         st.success("Task Updated Successfully")
     else:
         st.error("Task ID Not Found")
+        
+        tasks = get_tasks(user)
 
 tasks = get_tasks(user)
+
+df = pd.DataFrame(
+    tasks,
+    columns=[
+        "Task ID",
+        "User",
+        "Task",
+        "Priority",
+        "Due Date",
+        "Status"
+    ]
+)
+
+st.dataframe(df, use_container_width=True)
 
 task_options = {
     f"{task[0]} - {task[2]}": task[0]

@@ -26,9 +26,6 @@ CREATE TABLE IF NOT EXISTS tasks(
 
 conn.commit()
 
-st.markdown("""
-<style>
-
 
 def register_user(username, password):
     try:

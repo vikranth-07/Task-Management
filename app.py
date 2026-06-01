@@ -142,7 +142,7 @@ def register_user(username, password):
     except:
         return False
 
-  def login_user(username,password):
+def login_user(username,password):
 
     cursor.execute(
         "SELECT * FROM users WHERE username=? AND password=?",
